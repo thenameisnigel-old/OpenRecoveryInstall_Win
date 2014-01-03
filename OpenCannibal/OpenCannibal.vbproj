@@ -13,24 +13,34 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <TargetFrameworkProfile />
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://waws-prod-ch1-001.ftp.azurewebsites.windows.net/site/wwwroot/win/</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <InstallUrl>http://downloads.projectopencannibal.org/win/</InstallUrl>
+    <SupportUrl>https://thenameisnigel.github.io/OpenRecoveryInstaller_Win</SupportUrl>
+    <TargetCulture>en-US</TargetCulture>
+    <ProductName>OpenRecovery Installer</ProductName>
+    <PublisherName>Norris Enterprises</PublisherName>
+    <SuiteName>OpenRecovery</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -38,6 +48,8 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>OpenCannibal Recovery Installer.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -66,6 +78,21 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>300x300.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>931FF121298D5386649C0FF9DE851BBE1B5AD1C1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>OpenCannibal_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -98,6 +125,28 @@
     <Compile Include="AboutBox1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Amazon.Designer.vb">
+      <DependentUpon>Amazon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Amazon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asus.Designer.vb">
+      <DependentUpon>Asus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Asus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barnes.Designer.vb">
+      <DependentUpon>Barnes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Barnes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog1.Designer.vb" />
+    <Compile Include="Dialog1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +158,30 @@
       <DependentUpon>Form2.vb</DependentUpon>
     </Compile>
     <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoLabs.Designer.vb">
+      <DependentUpon>GoLabs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GoLabs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HTC.Designer.vb">
+      <DependentUpon>HTC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HTC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LGE.Designer.vb">
+      <DependentUpon>LGE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LGE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm1.Designer.vb">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -126,22 +199,54 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Samsung.Designer.vb">
+      <DependentUpon>Samsung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Samsung.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="version.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Amazon.resx">
+      <DependentUpon>Amazon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asus.resx">
+      <DependentUpon>Asus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barnes.resx">
+      <DependentUpon>Barnes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog1.resx" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GoLabs.resx">
+      <DependentUpon>GoLabs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HTC.resx">
+      <DependentUpon>HTC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LGE.resx">
+      <DependentUpon>LGE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm1.resx">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Samsung.resx">
+      <DependentUpon>Samsung.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -156,8 +261,14 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="OpenCannibal_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
@@ -173,9 +284,26 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <Content Include="300x300.ico" />
+    <None Include="Resources\hydro_800x800.png" />
+    <None Include="Resources\hydro_600x600.png" />
+    <None Include="Resources\hydro_500x500.png" />
+    <None Include="Resources\hydro_400x400.png" />
+    <None Include="Resources\hydro_350x350.png" />
+    <None Include="Resources\hydro_300x300.png" />
+    <None Include="Resources\1000x1000.png" />
+    <None Include="Resources\800x800.png" />
+    <None Include="Resources\600x600.png" />
+    <None Include="Resources\400x400.png" />
+    <None Include="Resources\350x350.png" />
+    <None Include="Resources\300x300.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
