@@ -38,6 +38,7 @@ Partial Class Form1
         Me.UpdateFomWebToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -104,16 +105,16 @@ Partial Class Form1
         '
         Me.Button1.Location = New System.Drawing.Point(12, 440)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(229, 64)
+        Me.Button1.Size = New System.Drawing.Size(248, 64)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "I accept the terms of use."
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(735, 440)
+        Me.Button2.Location = New System.Drawing.Point(720, 440)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(265, 64)
+        Me.Button2.Size = New System.Drawing.Size(280, 64)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "I DO NOT accept the terms of use."
         Me.Button2.UseVisualStyleBackColor = True
@@ -139,7 +140,7 @@ Partial Class Form1
         '
         'WebBrowser1
         '
-        Me.WebBrowser1.Location = New System.Drawing.Point(189, 152)
+        Me.WebBrowser1.Location = New System.Drawing.Point(189, 185)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
         Me.WebBrowser1.Size = New System.Drawing.Size(607, 249)
@@ -156,11 +157,23 @@ Partial Class Form1
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "OpenRecovery Installer Alpha" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(235, 131)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(533, 39)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "This is an extremely alpha version of potentionally dangerous software." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Do not" & _
+    " expect this to work perfectly, and ALWAYS REMEMBER to go to the help menu and c" & _
+    "heck for updates." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1012, 516)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.Button2)
@@ -191,5 +204,6 @@ Partial Class Form1
     Friend WithEvents UpdateFomWebToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 
 End Class

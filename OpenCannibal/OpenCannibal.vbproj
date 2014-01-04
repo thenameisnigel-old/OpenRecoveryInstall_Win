@@ -131,6 +131,7 @@
     <Compile Include="Amazon.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Asus.Designer.vb">
       <DependentUpon>Asus.vb</DependentUpon>
     </Compile>
