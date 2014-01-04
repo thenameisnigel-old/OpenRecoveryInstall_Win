@@ -13,16 +13,16 @@ Public Class Dialog1
         If DR = Windows.Forms.DialogResult.OK Then
             Client.DownloadFile(Web_update.Downuri, _
             FolderBrowserDialog1.SelectedPath.ToString & _
-            "\Program_update" & Date.Today.ToShortDateString.ToString & ".zip")
+            "\update" & Date.Today.ToShortDateString.ToString & ".zip")
         End If
         Me.Close()
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Client.DownloadFile(Web_update.Downuri, _
-        My.Computer.FileSystem.SpecialDirectories.Temp.ToString & "\Program_update.zip")
+        My.Computer.FileSystem.SpecialDirectories.Temp.ToString & "\update.zip")
         Process.Start(My.Computer.FileSystem.SpecialDirectories.Temp.ToString & _
-        "\Program_Update.zip")
+        "\update.zip")
         Application.Exit()
     End Sub
 

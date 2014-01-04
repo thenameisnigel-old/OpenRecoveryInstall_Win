@@ -118,7 +118,7 @@ Partial Class Dialog1
         '
         'FolderBrowserDialog1
         '
-        Me.FolderBrowserDialog1.Description = "Where will e file saved?"
+        Me.FolderBrowserDialog1.Description = "Where will the file saved?"
         '
         'Dialog1
         '

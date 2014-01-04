@@ -16,4 +16,12 @@
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
         Me.Close()
     End Sub
+
+    Private Sub UpdateFomWebToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateFomWebToolStripMenuItem.Click
+        Dialog1.ShowDialog()
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

@@ -24,6 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ROMToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RecoveryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExtrasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -32,7 +33,11 @@ Partial Class Form1
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateFromArchiveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateFomWebToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,6 +56,12 @@ Partial Class Form1
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(92, 22)
+        Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'ROMToolsToolStripMenuItem
         '
@@ -84,6 +95,7 @@ Partial Class Form1
         '
         'HelpToolStripMenuItem
         '
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CheckForUpdatesToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
@@ -106,17 +118,51 @@ Partial Class Form1
         Me.Button2.Text = "I DO NOT accept the terms of use."
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'ExitToolStripMenuItem
+        'CheckForUpdatesToolStripMenuItem
         '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ExitToolStripMenuItem.Text = "Exit"
+        Me.CheckForUpdatesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateFromArchiveToolStripMenuItem, Me.UpdateFomWebToolStripMenuItem})
+        Me.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem"
+        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CheckForUpdatesToolStripMenuItem.Text = "Check for Updates..."
+        '
+        'UpdateFromArchiveToolStripMenuItem
+        '
+        Me.UpdateFromArchiveToolStripMenuItem.Name = "UpdateFromArchiveToolStripMenuItem"
+        Me.UpdateFromArchiveToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.UpdateFromArchiveToolStripMenuItem.Text = "Update from archive..."
+        '
+        'UpdateFomWebToolStripMenuItem
+        '
+        Me.UpdateFomWebToolStripMenuItem.Name = "UpdateFomWebToolStripMenuItem"
+        Me.UpdateFomWebToolStripMenuItem.Size = New System.Drawing.Size(191, 22)
+        Me.UpdateFomWebToolStripMenuItem.Text = "Update fom web"
+        '
+        'WebBrowser1
+        '
+        Me.WebBrowser1.Location = New System.Drawing.Point(189, 152)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.Size = New System.Drawing.Size(607, 249)
+        Me.WebBrowser1.TabIndex = 3
+        Me.WebBrowser1.Url = New System.Uri("https://raw.github.com/thenameisnigel/hudson/master/notice.txt", System.UriKind.Absolute)
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Arial", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(154, 58)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(703, 56)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "OpenRecovery Installer Alpha" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1012, 516)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -140,5 +186,10 @@ Partial Class Form1
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CheckForUpdatesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UpdateFromArchiveToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UpdateFomWebToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 
 End Class
